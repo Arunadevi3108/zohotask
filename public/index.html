@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/script.js " type="module"></script>
+</head>
+<body>
+<ul>
+  <li><img src="images/flick.png" alt="Paris" style="width:20%;padding:10px"></li>
+  <li><a class="active" href="#Explore">Explore</a></li>
+  <li><a href="#Prints">Prints</a></li>
+  <li><a href="#GetPro">GetPro</a></li>
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+</ul>
+<div class="main">
+  <div id="myBtnContainer"><table>
+   <tr><th> <button class="btn active"  onclick="filterSelection('all')"> Show all</button></th>
+    <th><button class="btn " onclick="filterSelection('animals')"> Animals</button></th>
+    <th><button class="btn " onclick="filterSelection('birds')"> Birds</button></th>
+    <th><button class="btn " onclick="filterSelection('bg')"> Insects</button></th></tr></table>
+   <table>  <tr><center> 
+       <button class="btn" onclick="filterSelection('violet')" style="background-color:violet;"></button> &nbsp
+       <button class="btn" onclick="filterSelection('blue')" style="background-color:blue;"></button> &nbsp
+       <button class="btn" onclick="filterSelection('green')" style="background-color:green; "> </button> &nbsp
+       <button class="btn" onclick="filterSelection('yellow')" style="background-color:yellow;"></button> &nbsp
+       <button class="btn" onclick="filterSelection('orange')" style="background-color:orange; "> </button> &nbsp
+       <button class="btn" onclick="filterSelection('red')"style="background-color:red;"> </button>
+     </tr></center></table>
+  </div>
+  
+  </div>
+  <div class="row">
+    <div class="column animals violet;content"><img src="images/va1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></div>
+    <div class="column animals violet;content"><img src="images/va2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></div>  
+    <div class="column animals violet;content"><img src="images/va3.jpg"onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></div>
+    <div class="column animals violet;content"><img src="images/va4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></div>
+    <div class="column animals violet;content"><img src="images/va5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></div>
+    <div class="column animals violet;content"><img src="images/va6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></div>
+    <div class="column animals violet;content"><img src="images/va7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"></div>
+  
+    <div class="column animals blue;content"><img src="images/bla1.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"></div>
+    <div class="column animals blue;content"><img src="images/bla2.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow cursor"></div>
+    <div class="column animals blue;content"><img src="images/bla3.jpg"onclick="openModal();currentSlide(10)" class="hover-shadow cursor"></div>
+    <div class="column animals blue;content"><img src="images/bla4.jpg"onclick="openModal();currentSlide(11)" class="hover-shadow cursor"></div>
+    <div class="column animals blue;content"><img src="images/bla5.jpg"onclick="openModal();currentSlide(12)" class="hover-shadow cursor"></div>
+  
+    <div class="column animals green;content"><img src="images/g1.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g2.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g3.jpg"onclick="openModal();currentSlide(15)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g4.jpg"onclick="openModal();currentSlide(16)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g5.jpg"onclick="openModal();currentSlide(17)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g6.jpg"onclick="openModal();currentSlide(18)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g7.jpg"onclick="openModal();currentSlide(19)" class="hover-shadow cursor"></div>
+    <div class="column animals green;content"><img src="images/g8.jpg"onclick="openModal();currentSlide(20)" class="hover-shadow cursor"></div>
+  
+    <div class="column animals yellow;content"><img src="images/oa1.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow cursor"></div>
+    <div class="column animals yellow;content"><img src="images/oa2.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow cursor"></div>
+    <div class="column animals yellow;content"><img src="images/oa3.jpg"onclick="openModal();currentSlide(23)" class="hover-shadow cursor"></div>
+  
+    <div class="column animals orange;content"><img src="images/oa4.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow cursor"></div>
+    <div class="column animals orange;content"><img src="images/oa1.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow cursor"></div>
+    <div class="column animals orange;content"><img src="images/oa5.jpg"onclick="openModal();currentSlide(26)" class="hover-shadow cursor"></div>
+  
+    <div class="column animals red;content"><img src="images/ra1.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow cursor"></div>
+    <div class="column animals red;content"><img src="images/ra2.jpg" onclick="openModal();currentSlide(28)" class="hover-shadow cursor"></div>
+    <div class="column animals yellow;content"><img src="images/oa3.jpg"onclick="openModal();currentSlide(29)" class="hover-shadow cursor"></div>
+    <div class="column animals red;content"><img src="images/ra3.jpg" onclick="openModal();currentSlide(30)" class="hover-shadow cursor"></div>
+    <div class="column animals red;content"><img src="images/ra4.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow cursor"></div>
+  
+    <div class="column birds violet;content"><img src="images/v1.jpg"onclick="openModal();currentSlide(32)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v2.jpg" onclick="openModal();currentSlide(33)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v3.jpg" onclick="openModal();currentSlide(34)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v4.jpg" onclick="openModal();currentSlide(35)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v5.jpg" onclick="openModal();currentSlide(36)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v6.jpg" onclick="openModal();currentSlide(37)" class="hover-shadow cursor"></div>
+    <div class="column birds violet;content"><img src="images/v7.jpg" onclick="openModal();currentSlide(38)" class="hover-shadow cursor"></div>
+   
+    <div class="column birds blue;content"><img src="images/b31.jpg"onclick="openModal();currentSlide(39)" class="hover-shadow cursor"></div>
+    <div class="column birds blue;content"><img src="images/b34.jpg" onclick="openModal();currentSlide(40)" class="hover-shadow cursor"></div>
+    <div class="column birds blue;content"><img src="images/b35.jpg" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
+    <div class="column birds blue;content"><img src="images/b38.jpg" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+    <div class="column birds blue;content"><img src="images/b39.jpg" onclick="openModal();currentSlide(43)" class="hover-shadow cursor"></div>
+    <div class="column birds blue;content"><img src="images/b41.jpg" onclick="openModal();currentSlide(44)" class="hover-shadow cursor"></div>
+  
+  <div class="column  birds green;content"><img src="images/gb1.jpg" onclick="openModal();currentSlide(45)" class="hover-shadow cursor"></div>
+  <div class="column  birds green;content"><img src="images/gb2.jpg" onclick="openModal();currentSlide(46)" class="hover-shadow cursor"></div>
+  <div class="column birds green;content"><img src="images/gb5.jpg"onclick="openModal();currentSlide(47)" class="hover-shadow cursor"></div>
+  <div class="column birds green;content"><img src="images/gd4.jpg"onclick="openModal();currentSlide(48)" class="hover-shadow cursor"></div>
+  
+    <div class="column birds yellow;content"><img src="images/o1.jpg"onclick="openModal();currentSlide(49)" class="hover-shadow cursor"></div>
+    <div class="column birds yellow;content"><img src="images/o2.jpg" onclick="openModal();currentSlide(50)" class="hover-shadow cursor"></div>
+    <div class="column birds yellow;content"><img src="images/o3.jpg" onclick="openModal();currentSlide(51)" class="hover-shadow cursor"></div>
+    <div class="column birds yellow;content"><img src="images/o4.jpg"onclick="openModal();currentSlide(52)" class="hover-shadow cursor"></div>
+    <div class="column birds yellow;content"><img src="images/o5.jpg" onclick="openModal();currentSlide(53)" class="hover-shadow cursor"></div>
+    <div class="column birds yellow;content"><img src="images/o6.jpg" onclick="openModal();currentSlide(54)" class="hover-shadow cursor"></div>
+  
+    <div class="column birds orange;content"><img src="images/o7.jpg"onclick="openModal();currentSlide(55)" class="hover-shadow cursor"></div>
+    <div class="column birds orange;content"><img src="images/o8.jpg" onclick="openModal();currentSlide(56)" class="hover-shadow cursor"></div>
+    <div class="column birds orange;content"><img src="images/o9.jpg" onclick="openModal();currentSlide(57)" class="hover-shadow cursor"></div>
+    <div class="column birds orange;content"><img src="images/o10.jpg" onclick="openModal();currentSlide(58)" class="hover-shadow cursor"></div>
+  
+    <div class="column birds red;content"><img src="images/r1.jpg"onclick="openModal();currentSlide(59)" class="hover-shadow cursor"></div>
+    <div class="column birds red;content"><img src="images/r2.jpg" onclick="openModal();currentSlide(60)" class="hover-shadow cursor"></div>
+    <div class="column birds red;content"><img src="images/r3.jpg" onclick="openModal();currentSlide(61)" class="hover-shadow cursor"></div>
+    <div class="column birds red;content"><img src="images/r4.jpg" onclick="openModal();currentSlide(62)" class="hover-shadow cursor"></div>
+    <div class="column birds red;content"><img src="images/r5.jpg" onclick="openModal();currentSlide(63)" class="hover-shadow cursor"></div>
+    <div class="column birds red;content"><img src="images/r6.jpg" onclick="openModal();currentSlide(64)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg violet;content"><img src="images/vi1.jpg" onclick="openModal();currentSlide(65)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi2.jpg" onclick="openModal();currentSlide(66)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi3.jpg" onclick="openModal();currentSlide(67)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi4.jpg" onclick="openModal();currentSlide(68)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi5.jpg" onclick="openModal();currentSlide(69)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi6.jpg" onclick="openModal();currentSlide(70)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi7.jpg" onclick="openModal();currentSlide(71)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi8.jpg" onclick="openModal();currentSlide(72)" class="hover-shadow cursor"></div>
+    <div class="column bg violet;content"><img src="images/vi9.jpg" onclick="openModal();currentSlide(73)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg blue;content"><img src="images/bli1.jpg" onclick="openModal();currentSlide(74)" class="hover-shadow cursor"></div>
+    <div class="column bg blue;content"><img src="images/bli2.jpg" onclick="openModal();currentSlide(75)" class="hover-shadow cursor"></div>
+    <div class="column bg blue;content"><img src="images/bli3.jpg" onclick="openModal();currentSlide(76)" class="hover-shadow cursor"></div>
+    <div class="column bg blue;content"><img src="images/bli4.jpg" onclick="openModal();currentSlide(77)" class="hover-shadow cursor"></div>
+    <div class="column bg blue;content"><img src="images/bli5.jpg" onclick="openModal();currentSlide(78)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg green;content"><img src="images/gi.jpg" onclick="openModal();currentSlide(79)" class="hover-shadow cursor"></div>
+    <div class="column bg green;content"><img src="images/gi1.jpg" onclick="openModal();currentSlide(80)" class="hover-shadow cursor"></div>
+    <div class="column bg green;content"><img src="images/gi2.jpg" onclick="openModal();currentSlide(81)" class="hover-shadow cursor"></div>
+    <div class="column bg green;content"><img src="images/gi3.jpg" onclick="openModal();currentSlide(82)" class="hover-shadow cursor"></div>
+    <div class="column bg green;content"><img src="images/gi4.jpg" onclick="openModal();currentSlide(83)" class="hover-shadow cursor"></div>
+    <div class="column bg green;content"><img src="images/gi5.jpg" onclick="openModal();currentSlide(84)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg yellow;content"><img src="images/oi1.jpg" onclick="openModal();currentSlide(85)" class="hover-shadow cursor"></div>
+    <div class="column bg yellow;content"><img src="images/oi2.jpg" onclick="openModal();currentSlide(86)" class="hover-shadow cursor"></div>
+    <div class="column bg yellow;content"><img src="images/oi3.jpg" onclick="openModal();currentSlide(87)" class="hover-shadow cursor"></div>
+    <div class="column bg yellow;content"><img src="images/oi4.jpg" onclick="openModal();currentSlide(88)" class="hover-shadow cursor"></div>
+    <div class="column bg yellow;content"><img src="images/oi5.jpg" onclick="openModal();currentSlide(89)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg orange;content"><img src="images/i3.jpg" onclick="openModal();currentSlide(90)" class="hover-shadow cursor"></div>
+    <div class="column bg orange;content"><img src="images/i4.jpg" onclick="openModal();currentSlide(91)" class="hover-shadow cursor"></div>
+    <div class="column bg orange;content"><img src="images/gi4.jpg" onclick="openModal();currentSlide(92)" class="hover-shadow cursor"></div>
+  
+    <div class="column bg red;content"><img src="images/ri1.jpg" onclick="openModal();currentSlide(93)" class="hover-shadow cursor"></div>
+    <div class="column bg red;content"><img src="images/ri2.jpg" onclick="openModal();currentSlide(94)" class="hover-shadow cursor"></div>
+    <div class="column bg red;content"><img src="images/ri3.jpg" onclick="openModal();currentSlide(95)" class="hover-shadow cursor"></div>
+    <div class="column bg red;content"><img src="images/ri4.jpg" onclick="openModal();currentSlide(96)" class="hover-shadow cursor"></div>
+    <div class="column bg red;content"><img src="images/ri5.jpg" onclick="openModal();currentSlide(97)" class="hover-shadow cursor"></div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content" style="width:100%; height:95%">
+    <div class="sub_modal" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;
+    transition:transform 1s;cursor:zoom-in;display:grid">
+      
+      <div class="mySlides">
+    <img  class="a"  onclick="myFunction()"src="images/va1.jpg">
+      </div>
+      <div class="mySlides">
+      <img class="a" onclick="myFunction()"src="images/va2.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a"onclick="myFunction()" src="images/va3.jpg" >
+      </div>
+        <div class="mySlides">
+    <img  class="a"  onclick="myFunction()"src="images/va4.jpg">
+      </div>
+      <div class="mySlides">
+      <img class="a" onclick="myFunction()"src="images/va5.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a"onclick="myFunction()" src="images/va6.jpg" >
+      </div>
+      <div class="mySlides">
+    <img  class="a"  onclick="myFunction()"src="images/va7.jpg">
+      </div>
+  
+        <div class="mySlides">
+        <img class="a"onclick="myFunction()" src="images/bla1.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"src="images/bla2.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bla3.jpg">
+      </div>
+       <div class="mySlides">
+        <img class="a"onclick="myFunction()" src="images/bla4.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"src="images/bla5.jpg">
+      </div>
+  
+    
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"src="images/g1.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/g2.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/g3.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"src="images/g4.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/g5.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/g6.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"src="images/g7.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/g8.jpg" >
+      </div>
+    
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa1.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa2.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa3.jpg">
+      </div>
+          <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa4.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa1.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/oa5.jpg">
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/ra1.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/ra2.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oa3.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ra3.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ra4.jpg" >
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v1.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v2.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v3.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v4.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v5.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v6.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/v7.jpg" >
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/b31.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/b34.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/b35.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/b38.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/b39.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/b41.jpg">
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gb1.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gb2.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gb5.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gd4.jpg">
+      </div>
+  
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o1.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o2.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o3.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o4.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o5.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o6.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o7.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o8.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o9.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/o10.jpg" >
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r1.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r2.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r3.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r4.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r5.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/r6.jpg" >
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi1.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi2.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi3.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi4.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi5.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi6.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi7.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi8.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/vi9.jpg">
+      </div>
+  
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bli1.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bli2.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bli3.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bli4.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/bli5.jpg">
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi1.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi2.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi3.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi4.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi5.jpg">
+      </div>
+  
+  
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oi1.jpg">
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oi2.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oi3.jpg">
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oi4.jpg">
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/oi5.jpg">
+      </div>
+  
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/i3.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/i4.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/gi4.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ri1.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/ri2.jpg" >
+      </div>
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ri3.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/ri4.jpg" >
+      </div>
+  
+      <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ri5.jpg" >
+      </div>
+        <div class="mySlides">
+        <img class="a" onclick="myFunction()" src="images/ri3.jpg" >
+      </div>
+    <div class="mySlides">
+        <img class="a" onclick="myFunction()"  src="images/ri5.jpg" >
+      </div>
+    </div>
+  <div class="left_btn">
+      <a class="prev" onclick="plusSlides(-1)" style="height: 100% ;width:100%"></a>
+    <span class="previous">&#10094;</span>
+  </div>
+  <div class="right_btn">
+    <a class="next" onclick="plusSlides(1)" style="height:100% ;width:100%" ></a>
+      <span class="nxt">&#10095;</span>
+  </div>
+        <div id="myDIV" ><center>
+        <img class="demo cursor" src="images/va1.jpg"  onclick="currentSlide(1)" >
+        <img class="demo cursor" src="images/va2.jpg"  onclick="currentSlide(2)">
+        <img class="demo cursor" src="images/va3.jpg"  onclick="currentSlide(3)"></center>
+      </div>
+     </div>
+     </div> 
+</body>
+</html>
